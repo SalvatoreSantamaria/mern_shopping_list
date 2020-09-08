@@ -12,7 +12,7 @@ import {
 
 class AppNavbar extends Component {
   state = {
-     isOpen: false;
+     isOpen: false
   }
   toggle = () => {
     this.setState({
@@ -20,20 +20,23 @@ class AppNavbar extends Component {
     })
   }
   render() {
-    <div>
-      <Navbar color="dark" dark expand="sm" className="mb-5">
-        <Container>
-          <NavbarBrand href="/">ShoppingList</NavbarBrand>
-          <NavbarToggler onClick={this.toggle}/>
-          <Collapse isOpen={this.state.isOpen} navbar>
-            <Nav className="ml-auto" navbar>
-            @23:46
-
-            </Nav>
-          </Collapse>
-        </Container>
-      </Navbar>
-    </div>
+    return (
+      <div>
+        <Navbar color="dark" dark expand="sm" className="mb-5">
+          <Container>
+            <NavbarBrand href="/">ShoppingList</NavbarBrand>
+            <NavbarToggler onClick={this.toggle}/>
+            <Collapse isOpen={this.state.isOpen} navbar>
+              <Nav className="ml-auto" navbar>
+                <NavItem>
+                  <NavLink href="http://www.google.com">Google</NavLink> 
+                </NavItem>
+              </Nav>
+            </Collapse>
+          </Container>
+        </Navbar>
+      </div>
+    );
   }
 }
 
