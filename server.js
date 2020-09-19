@@ -1,4 +1,5 @@
-//use NPM run server to start
+// use NPM run server to start server
+// use npm run dev to start whole project
 
 const express = require('express');
 const mongoose = require('mongoose');
